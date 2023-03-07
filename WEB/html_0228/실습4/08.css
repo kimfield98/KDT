@@ -1,0 +1,110 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBar {
+    width: 460px;
+    height: 80px;
+    margin: 10px 30px;
+    background-color: lightblue;
+    clear: both;
+    display: flex;
+}
+
+.NavLeft {
+    font-size: larger;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavRight {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.NavRight1 {
+    font-size: larger;
+    margin: 0 5px;
+}
+
+.NavRight2 {
+    font-size: larger;
+    margin: 0 5px;
+}
+
+.ContentArea {
+    width: 460px;
+    height: 260px;
+    margin: 10px 0;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content1 {
+    font-size: small;
+    line-height: 80%;
+    margin: 10px 20px;
+    height: 60px;
+    background-color: lightyellow;
+    clear: both;
+}
+
+.content2 {
+    font-size: small;
+    line-height: 80%;
+    margin: 10px 20px;
+    height: 60px;
+    background-color: lightyellow;
+    clear: both;
+}
+
+.content3 {
+    margin: 10px 20px;
+    height: 60px;
+    background-color: lightyellow;
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mini1 {
+    background-color: lightcoral;
+    margin: 10px 0;
+    clear: both;
+}
+
+.mini2 {
+    background-color: lightcoral;
+    margin: 10px 0;
+    clear: both;
+}
+
+.mini3 {
+    background-color: lightcoral;
+    margin: 10px 0;
+    clear: both;
+}
+
+.Footer {
+    font-size: larger;
+    width: 460px;
+    height: 80px;
+    margin: 10px 0;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

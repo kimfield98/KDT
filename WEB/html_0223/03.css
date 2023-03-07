@@ -1,0 +1,32 @@
+
+.card-img {
+    height: 166px;
+    display: flex;
+    margin: auto;
+}
+
+.contents {
+    text-align: center;
+}
+
+a {
+    
+    text-decoration: none;
+}
+
+a.botton {
+    margin: auto;
+    display:block;
+    width:80px;
+    line-height:30px;
+    text-align:center;
+    background-color:#222;
+    color:#fff;
+}
+
+.main {
+    width: 250px;
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 0px 0px 10px 0px;
+}
