@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="original" class="container">
+    <div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">이메일</label>
+        <input type="email" class="form-control" id="inputEmail">
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">비밀번호</label>
+        <input type="password" class="form-control" id="inputPassword">
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary" role="submit">로그인</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="copy" class="container">
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  // div#original 과 동일한 DOM 생성 후 div#copy 의 자식 요소로 추가
+
+    //createElement를 시용해 태그들을 생성하기//
+    let divTag = document.createElement('div')
+    let div1Tag = document.createElement('div')
+    let div2Tag = document.createElement('div')
+    let div3Tag = document.createElement('div')
+    let lavel1Tag = document.createElement('lavel')
+    let lavel2Tag = document.createElement('lavel')
+    let input1Tag = document.createElement('input')
+    let input2Tag = document.createElement('input')
+    let buttonTag = document.createElement('button')
+
+    //textcontent를 사용해 태그 사이에 텍스트 넣기
+    lavel1Tag.textContent = '이메일'
+    lavel2Tag.textContent = '비밀번호'
+    buttonTag.textContent = '로그인'
+
+    //classList.add를 사용해 클래스 속성 넣기
+    div1Tag.classList.add('mb-3')
+    div2Tag.classList.add('mb-3')
+    div3Tag.classList.add('mb-3')
+    lavel1Tag.classList.add('form-label')
+    lavel2Tag.classList.add('form-label')
+    input1Tag.classList.add('form-control')
+    input2Tag.classList.add('form-control')
+    buttonTag.classList.add('btn','btn-primary')
+
+    //setAttribute를 사용해 일반 속성 넣기
+    lavel1Tag.setAttribute('for','inputEmail')
+    lavel2Tag.setAttribute('for','inputPassword')
+    input1Tag.setAttribute('type','email')
+    input1Tag.setAttribute('id','inputEmail')
+    input2Tag.setAttribute('type','password')
+    input2Tag.setAttribute('id','inputPassword')
+
+    //appendChild를 사용해 자식으로 넣기
+    div1Tag.appendChild(lavel1Tag)
+    div1Tag.appendChild(input1Tag)
+    div2Tag.appendChild(lavel2Tag)
+    div2Tag.appendChild(input2Tag)
+    div3Tag.appendChild(buttonTag)
+    divTag.appendChild(div1Tag)
+    divTag.appendChild(div2Tag)
+    divTag.appendChild(div3Tag)
+
+    // 기존에 있던 id값이 copy인 태그에 copyTag라는 변수를 할당하기
+    const copyTag = document.querySelector('#copy')
+    // copyTag에 divTag 자식으로 넣기
+    copyTag.appendChild(divTag)
+    // copyTag 출력하기
+    console.log(copyTag)
+
+    // 나머지 태그들 출력하기
+    console.log(divTag)
+    console.log(div1Tag)
+    console.log(div2Tag)
+    console.log(div3Tag)
+    console.log(lavel1Tag)
+    console.log(lavel2Tag)
+    console.log(input1Tag)
+    console.log(input2Tag)
+    console.log(buttonTag)
+</script>
+
+</html>

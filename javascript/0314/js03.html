@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="original" class="container">
+    <div id="card" class="card w-25">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sir_Tim_Berners-Lee.jpg/540px-Sir_Tim_Berners-Lee.jpg"
+        class="card-img-top">
+      <h4 class="card-header fw-bolder">
+        팀 버너스리
+      </h4>
+      <div class="card-body">
+        <p class="card-text">1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발. 웹의 아버지</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">국적 - 영국</li>
+        <li class="list-group-item">생년월일 - 1955년 6월 8일</li>
+        <li class="list-group-item">직업 - 전산과학자, 프로그래머, 교수</li>
+        <li class="list-group-item">출신 대학 - 옥스퍼드 대학교 물리학 학사</li>
+      </ul>
+      <div class="card-footer text-end">
+        <a href="https://ko.wikipedia.org/wiki/%ED%8C%80_%EB%B2%84%EB%84%88%EC%8A%A4%EB%A6%AC" class="card-link">
+          추가 정보
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="copy" class="container">
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  // div#original 과 동일한 DOM 생성 후 div#copy 의 자식 요소로 추가
+
+  // 가장 큰 div인 cardTag를 생성하고 클래스 속성 주고 일반 속성(id) 주고 출력하기
+  let cardTag = document.createElement('div')
+  cardTag.classList.add('card', 'w-25')
+  cardTag.setAttribute('id', 'card')
+  console.log(cardTag)
+
+  // imgTag를 생성하고 클래스 속성 주고 일반 속성(src) 주고 출력하기
+  let imgTag = document.createElement('img')
+  imgTag.classList.add('card-img-top')
+  imgTag.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sir_Tim_Berners-Lee.jpg/540px-Sir_Tim_Berners-Lee.jpg')
+  cardTag.appendChild(imgTag)
+  console.log(imgTag)
+
+  // h4Tag를 생성하고 태그 사이에 텍스트 넣고 클래스 속성 주고 출력하기
+  let h4Tag = document.createElement('h4')
+  h4Tag.textContent = '팀 버너스리'
+  h4Tag.classList.add('card-header', 'fw-bolder')
+  cardTag.appendChild(h4Tag)
+  console.log(h4Tag)
+
+  // div1Tag를 생성하고 클래스 속성 주고 출력하기
+  let div1Tag = document.createElement('div')
+  div1Tag.classList.add('card-body')
+  cardTag.appendChild(div1Tag)
+  console.log(div1Tag)
+  
+  // pTag를 생성하고 태그 사이에 텍스트 넣고 클래스 속성 주고 출력하기
+  let pTag = document.createElement('p')
+  pTag.textContent = '1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발. 웹의 아버지'
+  pTag.classList.add('card-text')
+  console.log(pTag)
+
+  // divTag에 pTag 자식으로 넣기
+  div1Tag.appendChild(pTag)
+
+  // ulTag를 생성하고 클래스 속성 주고 출력하기
+  let ulTag = document.createElement('ul')
+  ulTag.classList.add('list-group', 'list-group-flush')
+  console.log(ulTag)
+
+  // liTag를 1,2,3,4 각각 4개 만들어주고 태그 사이에 텍스트 넣고 클래스 속성 주기
+  let li1Tag = document.createElement('li')
+  li1Tag.textContent = '국적 - 영국'
+  li1Tag.classList.add('list-group-item')
+  let li2Tag = document.createElement('li')
+  li2Tag.textContent = '생년월일 - 1955년 6월 8일'
+  li2Tag.classList.add('list-group-item')
+  let li3Tag = document.createElement('li')
+  li3Tag.textContent = '직업 - 전산과학자, 프로그래머, 교수'
+  li3Tag.classList.add('list-group-item')
+  let li4Tag = document.createElement('li')
+  li4Tag.textContent = '출신 대학 - 옥스퍼드 대학교 물리학 학사'
+  li4Tag.classList.add('list-group-item')
+
+  // ulTag에 liTag 자식으로 넣고 출력하기
+  ulTag.appendChild(li1Tag)
+  ulTag.appendChild(li2Tag)
+  ulTag.appendChild(li3Tag)
+  ulTag.appendChild(li4Tag)
+  console.log(li1Tag)
+  console.log(li2Tag)
+  console.log(li3Tag)
+  console.log(li4Tag)
+  cardTag.appendChild(ulTag)
+
+  // div2Tag 생성하고 클래스 속성 주고 출력하기
+  let div2Tag = document.createElement('div')
+  div2Tag.classList.add('card-footer', 'text-end')
+  cardTag.appendChild(div2Tag)
+  console.log(div2Tag)
+
+  // aTag를 생성하고 태그 사이에 텍스트 넣고 클래스 속성 주고 일반 속성 주기
+  let aTag = document.createElement('a')
+  aTag.textContent = '추가정보'
+  aTag.classList.add('card-link')
+  aTag.setAttribute('href', 'https://ko.wikipedia.org/wiki/%ED%8C%80_%EB%B2%84%EB%84%88%EC%8A%A4%EB%A6%AC')
+  
+  // divTag에 aTag 자식으로 넣고 출력하기
+  div2Tag.appendChild(aTag)
+  console.log(aTag)
+
+  // 기존에 있던 id가 copy인 div에 copyTag라는 변수를 할당하고 cardTag를 자식으로 넣어 출력하기
+  const copyTag = document.querySelector('#copy')
+  copyTag.appendChild(cardTag)
+  console.log(copyTag)
+
+  // cardTag안에 큰 덩어리들을 안넣어줘서 화면에 안나왔는데 코드리뷰에서 조원분들이 찾아주셨다!!!
+  // appengChild 요소는 하나씩만 된다는 것도 알게 되었다 ..
+</script>
+
+</html>
